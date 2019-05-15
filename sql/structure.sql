@@ -5,6 +5,6 @@ CREATE TABLE status(
 
 CREATE TABLE todo(
     'id' INT(11),
-    'description' TEXT(255)
+    'description' VARCHAR(255)
 
 )
