@@ -12,6 +12,7 @@
  *     öffentlichen Zugänglichmachung oder andere Nutzung                       *
  *     bedarf der ausdrücklichen, schriftlichen Zustimmung von Dustin Curdt     *
  ********************************************************************************/
+
 $t = "my";
 echo "Hello $t World \n";
 echo 'Hello $t World \n';
