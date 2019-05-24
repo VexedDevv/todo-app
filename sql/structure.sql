@@ -1,17 +1,37 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 CREATE TABLE status(
-    'id' INT(11),
-    'name' VARCHAR(255),
-    'order',
-    'created-at',
-    'updated-at'
-);
+    `id` INT(11) NOT NULL,
+    `name` VARCHAR(255) NULL,
+    `order` VARCHAR(255) NULL,
+    `created_at` VARCHAR(255) NOT NULL,
+    `updated_at` VARCHAR(255) NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE todo(
-    'id' INT(11),
-    'description' VARCHAR(255),
-    'created-at',
-    'updated-at',
-    'status-id'
+    `id` INT(11) NOT NULL ,
+    `description` VARCHAR(255) NOT NULL,
+    `created_at` VARCHAR(255) NOT NULL,
+    `updated_at` VARCHAR(255) NOT NULL,
+    `status_id` INT(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+/* ADD PRIMARY KEY */
+ALTER TABLE `status` ADD PRIMARY KEY (`id`);
+ALTER TABLE `todo` ADD PRIMARY KEY (`id`);
 
-)
+/* ACTIVATE AUTO_INCREMENT */
+ALTER TABLE `status`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+ALTER TABLE `todo`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+ALTER TABLE `todo` ADD INDEX( `status_id`);
+
+ALTER TABLE `todo` ADD FOREIGN KEY (`status_id`) REFERENCES `status`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;

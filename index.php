@@ -13,6 +13,23 @@
  *     bedarf der ausdrücklichen, schriftlichen Zustimmung von Dustin Curdt     *
  ********************************************************************************/
 
+try {
+    $pdo = new PDO(
+        "mysql:host=localhost;db=todo-app",
+        "root",
+        "1234"
+    );
+} catch (PDOException $e) {
+    echo "Connection to the database failed.";
+    die();
+}
+
+
 $t = "my";
 echo "Hello $t World \n";
 echo 'Hello $t World \n';
+
+
+
+
+?>
