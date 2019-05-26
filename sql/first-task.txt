@@ -1,6 +1,6 @@
 1. create table status ✔
-2. create table todo ✔
-3. create entries "Open", "In Progress", "Done"
+2. create table to-do ✔
+3. create entries "Open", "In Progress", "Done" ✔
 4. select all status ordered by "order"
-5. Create some To Dos for each status.
-6. Select all To Dos which are "Open"
+5. Create some To Dos for each status. ✔
+6. Select all To Dos which are "Open" ✔
