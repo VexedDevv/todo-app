@@ -25,12 +25,7 @@
     }
 
 
-
     $t = "my";
     echo "Hello $t World \n";
     echo 'Hello $t World \n';
-
-
-
-
-    ?>
+    echo 'Skippy';
