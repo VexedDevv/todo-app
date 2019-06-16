@@ -1,0 +1,6 @@
+1. Hauptseite erstellen
+2. alle Status aus Db auslesen
+3. Alle Todos aus DB auslesen
+4. Tabelle anlegen
+5. Head bereich pro spalte 1 status
+6. In Body bereich die richtigen Todos anzeigen
